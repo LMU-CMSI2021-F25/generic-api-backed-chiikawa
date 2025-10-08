@@ -11,3 +11,5 @@ An input is needed to begin a specific search for an anime or an anime movie. If
 The Jikan API is used to display anime shows, movies, and random anime. It displays an image, title, score if known, episodes, and a short description of the media. It currently uses Jikan API 4.0.0. It is an open source API. More can be found in the [documentation](https://docs.api.jikan.moe/).
 
 [App deployment](http://localhost:5173/)
+[Code Sandbox](https://pmcsx5.csb.app/)
+I did not upload the images around the main box, but the cat image still remains in while hovering above the box. 
