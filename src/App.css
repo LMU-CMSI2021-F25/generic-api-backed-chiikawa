@@ -1,4 +1,22 @@
+@font-face {
+  font-family: 'Rubik';
+  src: url('./fonts/rubik-v28-latin-500.woff2') format('woff2'),
+       url('./fonts/rubik-v28-latin-500.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+.rubik-font {
+  font-family: 'Rubik', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .app-wrapper {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -46,6 +64,8 @@ header h1 {
   background-color: rgb(136, 151, 201); 
   color: rgba(0, 0, 0, 0.704);
   text-align: center;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 900;
   margin: 0;
   padding: 40px;
   text-shadow: 2px 6px 8px whitesmoke;
@@ -81,7 +101,8 @@ div.img_one {
 }
 
 .container > div.search-bar button, div.search-random button {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 900;
   background-color: rgb(90, 84, 156);
   color: white;
   border: none;
