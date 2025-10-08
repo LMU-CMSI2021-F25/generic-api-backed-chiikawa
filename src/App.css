@@ -1,42 +1,161 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  background-image: radial-gradient(ellipse, rgba(148, 136, 201, 0.787) ,rgba(136, 151, 201, 0.572), aliceblue);
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 650;
+  font-style: normal;
+}
+
+.img_one img, .img_two img {
+  max-height: 250px;
+  width: auto;
+  max-width: 100%;
+  padding: 5px;
+}
+
+.img_one img {
+  padding-top: 20px;
+}
+
+.img-display img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+body > header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+header h1 {
+  background-color: rgb(136, 151, 201); 
+  color: rgba(0, 0, 0, 0.704);
+  text-align: center;
+  margin: 0;
+  padding: 40px;
+  text-shadow: 2px 6px 8px whitesmoke;
+}
+
+div.img_one {
+  text-align: center;
+  color: black;
+  padding: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 
+    "search-bar search-bar"
+    "search-random search-random"
+    "info-display filters";
+  grid-template-rows: auto auto 1fr;
+  grid-template-columns: 6fr 2fr;
+  margin: 20px auto;
+  background-color: rgb(176, 187, 222);
+  color: rgba(0, 0, 0, 0.704);
+  padding: 20px;
+  width: 90%;
+  max-width: 1200px;
+  gap: 20px 30px;
+  flex-grow: 1;
+}
+
+.container > div {
+  background-color: rgba(240, 248, 255, 0.204);
+  padding: 10px;
+}
+
+.container > div.search-bar button, div.search-random button {
+  font-family: "Rubik", sans-serif;
+  background-color: rgb(90, 84, 156);
+  color: white;
+  border: none;
+  padding: 10px, 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container > div.search-bar button:hover, div.search-random button:hover {
+  background-color: rgba(146, 162, 215, 0.488);
+}
+
+.container > div.search-bar {
+  grid-area: search-bar;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container > div.search-random {
+  grid-area: search-random;
+  text-align: center;
+  position: relative;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container > .search-random .sliding-image {
+  position: absolute;
+  height: 100px;
+  width: auto;
+  left: 100%;
+  top: 50%;
+  opacity: 0;
+  transform: translateY(-50%) translateX(-440px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.container > .search-random:hover .sliding-image {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-400px);
 }
 
-.card {
-  padding: 2em;
+.container > div.info-display {
+  grid-area: info-display;
+  padding: 5px;
 }
 
-.read-the-docs {
-  color: #888;
+.container > div.filters {
+  grid-area: filters;
+}
+
+.container > div.filters > div.filters-title {
+  padding-bottom: 20px;
+}
+
+
+.container > div.filters > div.media {
+  padding-bottom: 20px;
+}
+
+.container > div.filters > div.genre {
+  padding-bottom: 20px;
+}
+
+div.img_two {
+  text-align: center;
+  color: black;
+  padding: 20px;
+}
+
+.footer {
+  margin-top: auto;
+  width: 100%;
+  height: 70px;
+  padding: 10px 0;
+  text-align: center;
+  background-color:  rgba(136, 151, 201, 0.265);
+  color: rgba(0, 0, 0, 0.704);
 }
