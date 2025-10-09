@@ -1,0 +1,1 @@
+Used ai to check why pressing the text box outputted an error everytime. It was because I had single quotes ' ', instead of ` ` back quotes, so it couldn't generate an output for the input in the main seach box. 
